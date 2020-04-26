@@ -3,9 +3,8 @@ sudo: required
 
 services:
   - dockers
-# before_install:
-#   - docker build -t makesaa/docker-react -f Dockerfile.dev .
-
+before_install:
+  - docker build -t makesaa/multidocker -f Dockerfile.dev .
 # script:
 #   - docker run -e CI=true makesaa/docker-react npm run test -- --coverage
 
