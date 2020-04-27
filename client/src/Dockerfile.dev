@@ -1,0 +1,11 @@
+# Use  docker image as a base
+# here alpine is base image 
+FROM node:alpine
+
+#working Directory
+WORKDIR /app
+# Download and install a Dependenc
+COPY package.json .
+RUN npm install
+COPY . .
+CMD ["npm","run", "start"]
