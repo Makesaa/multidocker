@@ -3,10 +3,3 @@
 FROM nginx
 
 COPY ./default.conf /etc/nginx/conf.d/default.conf
-
-RUN npm install
-
-COPY . .
-
-#tell when to starts as acontainer
-CMD ["npm","run", "start"]
