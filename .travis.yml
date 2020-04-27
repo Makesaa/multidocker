@@ -4,7 +4,7 @@ sudo: required
 services:
   - dockers
 before_install:
-  - docker-compose up --build
+  - docker-compose down && docker-compose up --build
 # script:
 #   - docker run -e CI=true makesaa/docker-react npm run test -- --coverage
 
